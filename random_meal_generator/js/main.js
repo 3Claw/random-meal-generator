@@ -6,6 +6,9 @@ get_meal_btn.addEventListener('click', () => {
         .then(res => res.json())
         .then(res => {
             createMeal(res.meals[0]);
+        })
+        .catch(e => {
+            console.warn(e);
         });
 });
 
